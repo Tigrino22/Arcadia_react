@@ -1,0 +1,50 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+// COLORS
+$primary : #435b48;
+$white : #F1F1F1;
+$dark : #172017;
+$dark-bg-light : #647065;
+$light-dark : #2d3a2d;
+
+// FONTS
+$font-primary : "Montserrat";
+$font-size-base : 16px;
+
+// BREAKPONITS
+$device-screen : 1024px;
+
+/*=============== VARIABLES SCSS ===============*/
+
+$header-height: 3.5rem;
+
+/*========== Colors ==========*/
+/*Color mode HSL(hue, saturation, lightness) et HEX*/
+$black-color: #16311d;
+$black-color-light: #2a5c37;
+$black-color-lighten: #459c5c;
+$white-color: #fff;
+$body-color: hsl(220, 100%, 97%);
+
+/*========== Font and typography ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+$body-font: 'Montserrat', sans-serif;
+$normal-font-size: $font-size-base;
+
+/*========== Font weight ==========*/
+$font-regular: 400;
+$font-semi-bold: 600;
+
+/*========== z index ==========*/
+$z-tooltip: 10;
+$z-fixed: 100;
+
+:root {
+    font-size: $font-size-base;
+}
+
+html {
+    font-family: $font-primary, Helvetica, sans-serif;
+}
+
