@@ -15,6 +15,6 @@ export default function MenuLink ({link, name, className, svg }: menuLinkType): 
                 isActive ? "active" : "",
                 className
             ].join(" ");
-        } }>{ name } { svg }</NavLink>
+        } }>{ svg } { name }</NavLink>
     </li>);
 }

@@ -1,24 +1,37 @@
+import { useEffect } from 'react';
 import DropdownItem from './headerComponents/dropdownItem';
 import MenuLink from './headerComponents/menuLink';
 import NavMenu from './headerComponents/navMenu';
 import NavToggle from './headerComponents/navToggle';
+import SocialMedia from './headerComponents/socialMedia';
 
 export default function Header() {
 
-    /*=============== SHOW MENU ===============*/
-    const showMenu = (toggleId: string, navId: string) => {
-        const toggle = document.getElementById(toggleId),
-            nav = document.getElementById(navId)
 
-        toggle?.addEventListener('click', () => {
-            // Add show-menu className to nav menu
-            nav?.classList.toggle('show-menu')
-            // Add show-icon to show and hide menu icon
-            toggle.classList.toggle('show-icon')
-        })
-    }
+    useEffect(() => {
 
-    showMenu('nav-toggle', 'nav-menu');
+        /*=============== SHOW MENU ===============*/
+        const showMenu = (toggleId: string, navId: string) => {
+            const toggle = document.getElementById(toggleId);
+            const nav = document.getElementById(navId);
+
+            const handleClick = () => {
+                // Add show-menu className to nav menu
+                nav?.classList.toggle('show-menu');
+                // Add show-icon to show and hide menu icon
+                toggle?.classList.toggle('show-icon');
+            }
+
+            toggle?.addEventListener('click', handleClick);
+
+            return () => {
+                toggle?.removeEventListener('click', handleClick);
+            }
+        }
+
+        showMenu('nav-toggle', 'nav-menu');
+
+    }, []);
 
 
     return (
@@ -28,8 +41,8 @@ export default function Header() {
 
                 {/* <!--=============== TITLE ===============--> */}
                 <div className="nav__data">
-                    <MenuLink link={'/'} name={'Arcadia'} svg={<i className="ri-seedling-line"></i>} className='nav__logo' />
-
+                    <MenuLink link={'/'} name={'Arcadia'} className='nav__logo' />
+                    <SocialMedia />
                     <NavToggle />
                 </div>
 
@@ -42,6 +55,8 @@ export default function Header() {
                     <MenuLink link={'/contact'} name={'Contact'} className='nav__link' />
 
                     <DropdownItem name='Compte' />
+
+                    {/* <MenuLink link={'/contact'} name={'Connexion'} className='nav__link' svg={<i className="ri-user-line"></i>} /> */}
                 </NavMenu>
 
             </nav>
