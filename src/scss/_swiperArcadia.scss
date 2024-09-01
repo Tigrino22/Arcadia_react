@@ -1,0 +1,78 @@
+.swiper__arcadia {
+
+  padding: 1rem 0;
+  background-image: url("./img/greenBackgroundWithStars.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+    .collection {
+
+        height: 100vh;
+        display: flex;
+        margin: 0 auto;
+        max-width: 900px;
+        justify-content: center;
+        align-items: center;
+      
+        * {
+          color: #fff;
+        }
+      
+        .content {
+          height: 28rem;
+          width: 25rem;
+          background-color: $cardsBackground;
+          border: .2rem solid #467151;
+          border-radius: .7rem;
+          border-bottom: .4rem solid $dark-bg-light;
+          border-top: .4rem solid $dark-bg-light;
+          overflow: hidden;
+          padding: .2rem;
+      
+      
+          img {
+            width: 100%;
+            border-bottom-left-radius: .6rem;
+            border-bottom-right-radius: .6rem;
+          }
+      
+          .text-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+      
+            h3 {
+              font-size: 1.7rem;
+              font-weight: 500;
+              margin-top: 1rem;
+            }
+      
+            p {
+              max-width: 22rem;
+              font-size: .8rem;
+              margin-top: 1rem;
+            }
+      
+            button {
+              background-color: $dark-bg-light;
+              padding: .5rem 1rem;
+              border: 2px solid $dark-bg-light;
+              border-radius: .5rem;
+              outline: none;
+              font-size: 1.25rem;
+              cursor: pointer;
+              transition: all .4s ease-in;
+
+              &:hover {
+                background-color: $dark;
+                border: 2px solid $dark;
+              }
+
+
+            }
+          }
+        }
+      }
+}

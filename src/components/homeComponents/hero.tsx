@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import HomeSlide from "./homeSlide";
-import HomeSlideContent from './homeSlideContent';
-import SliderNavigation from "./sliderNavigation";
+import HomeSlide from "./slider/homeSlide";
+import HomeSlideContent from './slider/homeSlideContent';
+import SliderNavigation from "./slider/sliderNavigation";
 
 export default function Hero(): JSX.Element {
 
