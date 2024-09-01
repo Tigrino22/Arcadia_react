@@ -47,11 +47,12 @@
     height: 100%;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     display: flex;
     align-items: center;
     justify-content: end;
     mask: linear-gradient(#000 0 0),
-    linear-gradient(#000 0 0);
+        linear-gradient(#000 0 0);
     mask-composite: xor;
     mask-clip: text;
     -webkit-mask: linear-gradient(#000 0 0),
