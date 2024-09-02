@@ -1,5 +1,8 @@
 footer {
 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: $black-color;
     padding-bottom: 3rem;
 
@@ -72,6 +75,7 @@ footer {
     }
 
     .footer-col .social-links a {
+        font-size: 1.5rem;
         display: inline-block;
         height: 40px;
         width: 40px;
