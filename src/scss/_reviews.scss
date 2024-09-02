@@ -1,0 +1,68 @@
+@import "./variables";
+
+.reviews-section {
+    padding: 3rem 2rem;
+    background: $color-light-beige; // Couleur de fond plus chaude pour la section
+    color: $color-text-dark;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        color: $color-dark-brown;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .reviews-list {
+        display: flex;
+        flex-direction: column; // Par défaut en colonne pour petits écrans
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        @media (min-width: 768px) {
+            flex-direction: row; // Disposition en ligne pour écrans moyens et grands
+            flex-wrap: wrap;
+        }
+    }
+
+    .review-item {
+        background-color: #fff3e0; // Couleur de fond chaude pour les cartes
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        border: 1px solid $color-dark-brown;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        flex: 1;
+        min-width: 250px; // Largeur minimale pour les cartes
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: $color-dark-brown;
+        }
+
+        footer {
+            text-align: right;
+            font-style: italic;
+            color: $color-dark-brown;
+            background-color: #ffd54f; // Couleur de fond pour le bloc de l'auteur
+            padding: 0.5rem;
+            border-radius: 8px;
+            border: 1px solid $color-dark-brown;
+
+            cite {
+                font-weight: bold;
+                color: $color-dark-brown;
+            }
+        }
+    }
+}
