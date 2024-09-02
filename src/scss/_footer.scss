@@ -1,8 +1,4 @@
 footer {
-
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     background-color: $black-color;
     padding-bottom: 3rem;
 
@@ -30,7 +26,6 @@ footer {
         width: auto;
         padding: 0 15px;
         margin-top: 3rem;
-
     }
 
     .footer-col h4 {
@@ -61,10 +56,9 @@ footer {
         font-size: 16px;
         text-transform: capitalize;
         text-wrap: nowrap;
-        color: #ffffff;
+        color: #bbbbbb;
         text-decoration: none;
         font-weight: 300;
-        color: #bbbbbb;
         display: block;
         transition: all 0.3s ease;
     }
@@ -72,6 +66,12 @@ footer {
     .footer-col ul li a:hover {
         color: #ffffff;
         padding-left: 8px;
+    }
+
+    .footer-col ul li {
+        color: #bbbbbb; /* Pour les éléments de la liste non cliquables comme les horaires */
+        font-size: 16px;
+        font-weight: 300;
     }
 
     .footer-col .social-links a {
@@ -92,5 +92,4 @@ footer {
         color: #24262b;
         background-color: #ffffff;
     }
-
 }

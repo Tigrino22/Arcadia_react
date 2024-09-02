@@ -9,6 +9,17 @@ $dark-bg-light : #647065;
 $light-dark : #2d3a2d;
 $cardsBackground: #467151;
 
+// Variables SCSS
+$color-light-beige: #FFEDD5;
+$color-tan: #947a5b;
+$color-brown: #84602d;
+$color-dark-brown: #4b3007;
+$color-text-dark: #333;
+$color-text-light: #fff;
+
+// Dégradé radial
+$gradient-background: radial-gradient(circle, $color-light-beige, $color-tan, $color-brown, $color-dark-brown);
+
 // FONTS
 $font-primary : "Montserrat";
 $font-size-base : 16px;
