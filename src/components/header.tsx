@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import DropdownItem from './headerComponents/dropdownItem';
 import MenuLink from './headerComponents/menuLink';
 import NavMenu from './headerComponents/navMenu';
@@ -8,30 +8,33 @@ import SocialMedia from './headerComponents/socialMedia';
 export default function Header() {
 
 
-    useEffect(() => {
+    /*=============== SHOW MENU ===============*/
 
-        /*=============== SHOW MENU ===============*/
-        const showMenu = (toggleId: string, navId: string) => {
+    const useMenuToggle = (toggleId: string, navId: string) => {
+        const handleClickRef = useRef<(event: MouseEvent) => void>();
+    
+        useEffect(() => {
             const toggle = document.getElementById(toggleId);
             const nav = document.getElementById(navId);
-
-            const handleClick = () => {
-                // Add show-menu className to nav menu
-                nav?.classList.toggle('show-menu');
-                // Add show-icon to show and hide menu icon
-                toggle?.classList.toggle('show-icon');
+    
+            if (toggle && nav) {
+                handleClickRef.current = () => {
+                    nav.classList.toggle('show-menu');
+                    toggle.classList.toggle('show-icon');
+                };
+    
+                const handleClick = handleClickRef.current;
+    
+                toggle.addEventListener('click', handleClick);
+    
+                return () => {
+                    toggle.removeEventListener('click', handleClick);
+                };
             }
+        }, [toggleId, navId]);
+    };
 
-            toggle?.addEventListener('click', handleClick);
-
-            return () => {
-                toggle?.removeEventListener('click', handleClick);
-            }
-        }
-
-        showMenu('nav-toggle', 'nav-menu');
-
-    }, []);
+    useMenuToggle('nav-toggle', 'nav-menu');
 
 
     return (

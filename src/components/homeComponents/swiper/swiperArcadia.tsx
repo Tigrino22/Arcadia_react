@@ -33,8 +33,6 @@ export default function SwiperArcadia({ children }: { children: ReactNode }): JS
     });
   }, []);
 
-  console.log('render');
-
 
   return (
     // <!-- Swiper -->
