@@ -3,14 +3,14 @@
 .services-page {
 
     padding: 5rem 2rem 2rem 2rem;
-    background: linear-gradient(360deg, $color-tan 25%, $dark-bg-light 50%, $primary 75%);
+    background: linear-gradient(180deg, #2697b0 20%, #228d84 40%, #0fac78 60%, #5c942e 80%);
 
     h1 {
         font-size: 2rem;
         font-weight: 700;
         text-align: center;
         margin-bottom: 2rem;
-        color: $color-dark-brown;
+        color: $color-light-beige;
     }
 
     .services-list {
@@ -24,12 +24,22 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-        background-color: $color-tan;
+        background-color: rgba($color: $color-text-dark, $alpha: .5);
         padding: 1.5rem;
         border-radius: 8px;
+        border: 1px solid rgba($color: $color-light-beige, $alpha: .5);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
 
+        transition: all .4s ease-in;
+
+        // Default layout for small screens (image above text)
         flex-direction: column;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 1px 5px 8px rgba($color: $color-text-dark, $alpha: .5);
+        }
 
         .service-content {
             display: flex;
@@ -38,7 +48,7 @@
 
             h2 {
                 font-size: 1.5rem;
-                color: $color-dark-brown;
+                color: $color-light-beige;
                 margin-bottom: 0.5rem;
             }
 
@@ -48,19 +58,20 @@
                 margin-bottom: 1.5rem;
             }
 
-            
+
         }
 
         .service-image-container {
             flex: 1;
             text-align: center;
-            margin-bottom: 1rem;
+
 
             .service-image {
                 width: 100%;
                 height: auto;
                 border-radius: 8px;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                margin-bottom: 1rem;
             }
         }
 
@@ -75,14 +86,13 @@
             }
 
             &.right {
-                .service-image-container {
-                }
+                .service-image-container {}
             }
 
             .service-content {
                 gap: 4rem;
                 margin: 0 2rem;
-                
+
             }
 
             .service-image-container {
@@ -103,12 +113,19 @@
             p {
                 font-size: 1.125rem;
             }
+
+            .service-image-container {
+                .service-image {
+                    margin-bottom: 0;
+                }
+            }
+
         }
     }
 
     @media (min-width: 1024px) {
 
         padding: 8rem 2rem 2rem 2rem;
-        
+
     }
 }

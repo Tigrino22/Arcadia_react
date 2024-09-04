@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Layout from './pages/layout';
+import SpinnerLoader from "./components/spinnerLoader";
 
 const HomePage = lazy(() => import("./pages/home"));
 const Habitats = lazy(() => import("./pages/habitats"));
@@ -36,7 +37,7 @@ const router = createBrowserRouter(
 function App() {
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<SpinnerLoader />}>
       <RouterProvider router={router} />
     </Suspense>
   )
