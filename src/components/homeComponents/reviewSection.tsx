@@ -1,7 +1,11 @@
-import ReviewItem from "./reviewItem";
-import '../../../scss/_reviews.scss';
+import ReviewItem from "./reviews/reviewItem";
+import '../../scss/_reviews.scss';
 
 export default function ReviewsSection() {
+
+
+    // Prévoir une fonction pour récupérer les derniers avis du site.
+
     return (
         <section className="reviews-section">
             <h2>Avis de Nos Visiteurs</h2>

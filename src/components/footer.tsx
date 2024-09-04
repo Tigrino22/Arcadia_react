@@ -30,6 +30,9 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div className="footer-col">
+
+                        {/* Ces informations peuvent être récupérées via requéte en BDD ?NoSQL? */}
+
                         <h4>Horaires d'ouverture</h4>
                         <ul>
                             <li>Lundi - Vendredi: 9h - 18h</li>
