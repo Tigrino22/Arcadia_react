@@ -3,7 +3,8 @@
 .habitats-page {
 
     padding: 5rem 2rem 2rem 2rem;
-    background-color: $color-light-beige;
+    // background-color: $color-light-beige;
+    background: linear-gradient(360deg, $color-tan 25%, $dark-bg-light 50%, $primary 75%);
 
     h1 {
         font-size: 2rem;
@@ -48,6 +49,8 @@
                 color: $color-text-light;
                 margin-bottom: 1.5rem;
             }
+
+            
         }
 
         .habitat-image-container {
@@ -81,8 +84,9 @@
             }
 
             .habitat-content {
-                text-align: left;
-                margin: 2rem;
+                gap: 4rem;
+                margin: 0 2rem;
+                
             }
 
             .habitat-image-container {
