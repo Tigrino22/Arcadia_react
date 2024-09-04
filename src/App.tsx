@@ -3,9 +3,9 @@ import { lazy, Suspense } from "react";
 import Layout from './pages/layout';
 
 const HomePage = lazy(() => import("./pages/home"));
-const HabitatsPage = lazy(() => import("./pages/habitats"));
-const ServicesPage = lazy(() => import('./pages/services'));
-const ContactPage = lazy(() => import("./pages/contact"));
+const Habitats = lazy(() => import("./pages/habitats"));
+const Services = lazy(() => import('./pages/services'));
+const Contact = lazy(() => import("./pages/contact"));
 
 
 
@@ -17,9 +17,9 @@ const router = createBrowserRouter(
       element: <Layout />,
       children: [
         { path: "", element: <HomePage /> },
-        { path: "habitats", element: <HabitatsPage /> },
-        { path: "services", element: <ServicesPage /> },
-        { path: "contact", element: <ContactPage /> },
+        { path: "habitats", element: <Habitats /> },
+        { path: "services", element: <Services /> },
+        { path: "contact", element: <Contact /> },
       ]
     },
     {

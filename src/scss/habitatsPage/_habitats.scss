@@ -1,0 +1,114 @@
+@import "../variables";
+
+.habitats-page {
+
+    padding: 5rem 2rem 2rem 2rem;
+    background-color: $color-light-beige;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 2rem;
+        color: $color-dark-brown;
+    }
+
+    .habitats-list {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .habitat-item {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $color-tan;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+        // Default layout for small screens (image above text)
+        flex-direction: column;
+
+        .habitat-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h2 {
+                font-size: 1.5rem;
+                color: $color-dark-brown;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+                color: $color-text-light;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .habitat-image-container {
+            flex: 1;
+            text-align: center;
+            margin-bottom: 1rem;
+
+            .habitat-image {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        // Media queries for larger screens
+        @media (min-width: 768px) {
+            flex-direction: row;
+
+            &.left {
+                .habitat-image-container {
+                    order: -1;
+                    // margin-right: 2rem;
+                }
+            }
+
+            &.right {
+                .habitat-image-container {
+                    // margin-left: 2rem;
+                }
+            }
+
+            .habitat-content {
+                text-align: left;
+                margin: 2rem;
+            }
+
+            .habitat-image-container {
+                width: 100%;
+                min-width: 300px;
+                margin-bottom: 0;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            padding: 2rem;
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.125rem;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+
+        padding: 8rem 2rem 2rem 2rem;
+        
+    }
+}

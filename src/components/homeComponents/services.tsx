@@ -1,4 +1,4 @@
-import '../../scss/_services.scss';
+import '../../scss/homePage/_services.scss';
 import CardService from './services/card';
 
 export default function Services() {

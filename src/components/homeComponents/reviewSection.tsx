@@ -1,5 +1,5 @@
 import ReviewItem from "./reviews/reviewItem";
-import '../../scss/_reviews.scss';
+import '../../scss/homePage/_reviews.scss';
 
 export default function ReviewsSection() {
 

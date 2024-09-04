@@ -1,4 +1,4 @@
-import '../../scss/_habitats.scss';
+import '../../scss/homePage/_habitats.scss';
 import CardHabitat from './habitats/card';
 
 
