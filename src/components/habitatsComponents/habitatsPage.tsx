@@ -9,9 +9,9 @@ export default function HabitatsPage() {
     // ]);
 
     const habitats = [
-        { id: 1, name: 'Savane', image: './img/savane.png', description: 'La savane est vaste et accueillante, peuplée par des lions, éléphants et autres animaux majestueux.' },
-        { id: 2, name: 'Jungle', image: './img/jungle.png', description: 'La jungle est dense et mystérieuse, abritant des espèces exotiques comme les singes et les oiseaux tropicaux.' },
-        { id: 3, name: 'Marais', image: './img/marais.png', description: 'Le marais est humide et mystérieux, avec une faune unique incluant des crocodiles et autres créatures aquatiques.' },
+        { id: 1, name: 'Savane', image: './img/savane.png', description: 'La savane est vaste et accueillante, peuplée par des lions, éléphants et autres animaux majestueux.', link: '#', linkName: 'Plus d\'informations' },
+        { id: 2, name: 'Jungle', image: './img/jungle.png', description: 'La jungle est dense et mystérieuse, abritant des espèces exotiques comme les singes et les oiseaux tropicaux.', link: '#', linkName: 'Plus d\'informations' },
+        { id: 3, name: 'Marais', image: './img/marais.png', description: 'Le marais est humide et mystérieux, avec une faune unique incluant des crocodiles et autres créatures aquatiques.', link: '#', linkName: 'Plus d\'informations' },
     ];
 
     return (
@@ -23,6 +23,7 @@ export default function HabitatsPage() {
                         <div className="habitat-content">
                             <h2>{habitat.name}</h2>
                             <p>{habitat.description}</p>
+                            <a href={habitat.link} className="btn">{habitat.linkName}</a>
                         </div>
                         <div className="habitat-image-container">
                             <img src={habitat.image} alt={habitat.name} className="habitat-image" />

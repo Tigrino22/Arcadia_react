@@ -9,9 +9,9 @@ export default function ServicesPage(): JSX.Element {
     // ]);
 
     const services = [
-        { id: 1, name: 'Ateliers pour enfants', image: './img/atelier_enfants.jpg', description: 'Faites décourvri à vos enfants l\'environnement naturel à travers de nombreux ateliers.' },
-        { id: 2, name: 'Visites guidées', image: './img/visite_guide.jpg', description: 'Des visites guidées pour découvrir les habitats et les animaux du parc.' },
-        { id: 3, name: 'Restauration', image: './img/restauration.jpg', description: 'Des points de restauration pour les visiteurs, offrant des repas variés.' },
+        { id: 1, name: 'Ateliers pour enfants', image: './img/atelier_enfants.jpg', description: 'Faites décourvri à vos enfants l\'environnement naturel à travers de nombreux ateliers.', link: '#', linkName: 'Plus d\'informations'},
+        { id: 2, name: 'Visites guidées', image: './img/visite_guide.jpg', description: 'Des visites guidées pour découvrir les habitats et les animaux du parc.', link: '#', linkName: 'Plus d\'informations'},
+        { id: 3, name: 'Restauration', image: './img/restauration.jpg', description: 'Des points de restauration pour les visiteurs, offrant des repas variés.', link: '#', linkName: 'Plus d\'informations'},
     ];
 
     return (
@@ -23,6 +23,7 @@ export default function ServicesPage(): JSX.Element {
                         <div className="service-content">
                             <h2>{service.name}</h2>
                             <p>{service.description}</p>
+                            <a href={service.link} className="btn">{service.linkName}</a>
                         </div>
                         <div className="service-image-container">
                             <img src={service.image} alt={service.name} className="service-image" />
