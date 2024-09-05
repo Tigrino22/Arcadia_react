@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Layout from './pages/layout';
 import SpinnerLoader from "./components/spinnerLoader";
+import Login from "./pages/Auth/login";
 
 const HomePage = lazy(() => import("./pages/home"));
 const Habitats = lazy(() => import("./pages/habitats"));
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
         { path: "habitats", element: <Habitats /> },
         { path: "services", element: <Services /> },
         { path: "contact", element: <Contact /> },
+        { path: "login", element: <Login />},
       ]
     },
     {
