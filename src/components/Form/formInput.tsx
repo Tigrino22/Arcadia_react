@@ -22,7 +22,7 @@ export default function FormInput({
     return (
         <div className="form-group">
 
-            {label && id && (
+            {label && (
                 <label className="form-label" htmlFor={id}>
                     {label}:
                 </label>

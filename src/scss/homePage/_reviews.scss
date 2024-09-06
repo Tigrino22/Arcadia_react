@@ -1,6 +1,11 @@
 @import "../variables";
 
 .reviews-section {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     padding: 3rem 2rem;
     background: $color-light-beige;
     color: $color-text-dark;
@@ -10,7 +15,6 @@
     h2 {
         font-size: 2.5rem;
         margin-bottom: 2rem;
-        color: $color-dark-brown;
         text-align: center;
         font-weight: bold;
     }
@@ -65,4 +69,61 @@
             }
         }
     }
+
+    .submit-review {
+        padding-top: 2rem;
+
+        min-width: 720px;
+
+        h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+
+        .form-group {
+            width: 100%;
+
+            .form-input,
+            .form-area {
+                background-color: $black-color;
+                border: 2px solid rgba($color: $body-color, $alpha: .5);
+
+                transition: all .2s ease;
+
+                &:focus {
+                    border: 2px solid rgba($color: $body-color, $alpha: 1);
+                }
+            }
+
+        }
+
+        .button-field {
+            text-align: right;
+
+            .btn {
+                background-color: $body-color;
+                border: 2px solid $body-color;
+
+                transition: all .2s ease;
+
+                &:hover {
+                    transform: translate(0);
+                }
+
+                &:focus {
+                    background-color: $black-color;
+                    color: $body-color;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        @media (max-width: 720px) {
+            min-width: 320px;
+        }
+
+    }
+    
 }

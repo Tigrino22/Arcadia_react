@@ -1,4 +1,5 @@
 import ReviewItem from "./reviews/reviewItem";
+import SubmitReview from "./submitReview";
 import '../../scss/homePage/_reviews.scss';
 
 export default function ReviewsSection() {
@@ -23,6 +24,8 @@ export default function ReviewsSection() {
                     content="Très bon rapport qualité-prix et des animaux en excellente santé. Je reviendrai sans hésiter."
                 />
             </div>
+
+            <SubmitReview />
         </section>
     );
 }
