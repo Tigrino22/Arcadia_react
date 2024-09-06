@@ -57,9 +57,9 @@ export default function Header() {
                     <MenuLink link={'/services'} name={'Services'} className='nav__link' />
                     <MenuLink link={'/contact'} name={'Contact'} className='nav__link' />
 
-                    <DropdownItem name='Compte' />
+                    {/* <DropdownItem name='Compte' /> */}
 
-                    {/* <MenuLink link={'/contact'} name={'Connexion'} className='nav__link' svg={<i className="ri-user-line"></i>} /> */}
+                    <MenuLink link={'/login'} name={'Connexion'} className='nav__link' svg={<i className="ri-user-line"></i>} />
                 </NavMenu>
 
             </nav>

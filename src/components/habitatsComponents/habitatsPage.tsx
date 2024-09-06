@@ -1,4 +1,4 @@
-import "../../scss/habitatsPage/_habitats.scss";
+import "../../scss/listePage/_listePage.scss";
 
 export default function HabitatsPage() {
     // Future dynamic part - to be implemented later
@@ -15,18 +15,18 @@ export default function HabitatsPage() {
     ];
 
     return (
-        <section className="habitats-page">
+        <section className="content-page">
             <h1>Nos Habitats Principaux</h1>
-            <div className="habitats-list">
+            <div className="content-list">
                 {habitats.map((habitat, index) => (
-                    <div key={habitat.id} className={`habitat-item ${index % 2 === 0 ? 'left' : 'right'}`}>
-                        <div className="habitat-content">
+                    <div key={habitat.id} className={`content-item ${index % 2 === 0 ? 'left' : 'right'}`}>
+                        <div className="content-content">
                             <h2>{habitat.name}</h2>
                             <p>{habitat.description}</p>
                             <a href={habitat.link} className="btn">{habitat.linkName}</a>
                         </div>
-                        <div className="habitat-image-container">
-                            <img src={habitat.image} alt={habitat.name} className="habitat-image" />
+                        <div className="content-image-container">
+                            <img src={habitat.image} alt={habitat.name} className="content-image" />
                         </div>
                     </div>
                 ))}

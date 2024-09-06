@@ -1,4 +1,4 @@
-import '../../scss/servicesPage/_services.scss';
+import '../../scss/listePage/_listePage.scss';
 
 export default function ServicesPage(): JSX.Element {
     // Future dynamic part - to be implemented later
@@ -15,18 +15,18 @@ export default function ServicesPage(): JSX.Element {
     ];
 
     return (
-        <section className="services-page">
+        <section className="content-page">
             <h1>Nos Services</h1>
-            <div className="services-list">
+            <div className="content-list">
                 {services.map((service, index) => (
-                    <div key={service.id} className={`service-item ${index % 2 === 0 ? 'left' : 'right'}`}>
-                        <div className="service-content">
+                    <div key={service.id} className={`content-item ${index % 2 === 0 ? 'left' : 'right'}`}>
+                        <div className="content-content">
                             <h2>{service.name}</h2>
                             <p>{service.description}</p>
                             <a href={service.link} className="btn">{service.linkName}</a>
                         </div>
-                        <div className="service-image-container">
-                            <img src={service.image} alt={service.name} className="service-image" />
+                        <div className="content-image-container">
+                            <img src={service.image} alt={service.name} className="content-image" />
                         </div>
                     </div>
                 ))}

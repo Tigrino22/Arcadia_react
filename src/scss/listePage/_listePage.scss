@@ -1,8 +1,9 @@
 @import "../variables";
 
-.services-page {
+.content-page {
 
     padding: 5rem 2rem 2rem 2rem;
+    // background-color: $color-light-beige;
     background: linear-gradient(180deg, #3a37e5 25%, #228d84 50%, #3a37e5 75%);
 
     h1 {
@@ -13,13 +14,14 @@
         color: $color-light-beige;
     }
 
-    .services-list {
+    .content-list {
         display: flex;
         flex-direction: column;
         gap: 3rem;
+
     }
 
-    .service-item {
+    .content-item {
         display: flex;
         flex-wrap: nowrap;
         align-items: center;
@@ -41,10 +43,13 @@
             box-shadow: 1px 5px 8px rgba($color: $color-text-dark, $alpha: .5);
         }
 
-        .service-content {
+
+
+        .content-content {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-evenly;
+            margin-bottom: 2rem;
 
             h2 {
                 font-size: 1.5rem;
@@ -80,17 +85,16 @@
 
         }
 
-        .service-image-container {
+        .content-image-container {
             flex: 1;
             text-align: center;
+            
 
-
-            .service-image {
+            .content-image {
                 width: 100%;
                 height: auto;
                 border-radius: 8px;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-                margin: 1rem 0;
             }
         }
 
@@ -99,25 +103,21 @@
             flex-direction: row;
 
             &.left {
-                .service-image-container {
+                .content-image-container {
                     order: -1;
+                    // margin-right: 2rem;
                 }
             }
 
-            &.right {
-                .service-image-container {}
-            }
-
-            .service-content {
-                gap: 4rem;
-                margin: 0 2rem;
+            .content-content {
+                gap: 2rem;
+                margin: 2rem;
 
             }
 
-            .service-image-container {
+            .content-image-container {
                 width: 100%;
                 min-width: 300px;
-                margin-bottom: 0;
                 text-align: center;
             }
         }
@@ -133,9 +133,6 @@
                 font-size: 1.125rem;
             }
 
-            .service-image {
-                max-width: 360px;
-            }
 
         }
     }
