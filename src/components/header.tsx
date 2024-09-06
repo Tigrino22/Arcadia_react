@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import DropdownItem from './headerComponents/dropdownItem';
+// import DropdownItem from './headerComponents/dropdownItem';
 import MenuLink from './headerComponents/menuLink';
 import NavMenu from './headerComponents/navMenu';
 import NavToggle from './headerComponents/navToggle';
