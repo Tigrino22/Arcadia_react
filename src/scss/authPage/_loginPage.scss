@@ -1,0 +1,156 @@
+@import "../variables";
+
+$form-color-primary: #f3f4f4;
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #000428, #004e92);
+
+    h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $form-color-primary;
+        margin-bottom: 2rem;
+    }
+
+    .form {
+        width: 100%;
+        max-width: 400px;
+        background-color: rgba($form-color-primary, 0.13);
+        border: 1px solid rgba($form-color-primary, 0.2);
+        border-radius: 0.5rem;
+        box-shadow: 0 6px 16px rgba(0, 230, 255, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+    }
+
+    .login-form {
+        width: 100%;
+
+        .form-group {
+            padding: 0 1rem 1rem 1rem;
+            width: 100%;
+        }
+
+        .field {
+            position: relative;
+
+            i {
+                position: absolute;
+                color: $form-color-primary;
+                font-size: 1.25rem;
+                transform: translate(2rem, 0.75rem);
+            }
+
+            .form-input {
+                background-color: transparent;
+                border: 1px solid rgba($form-color-primary, 0.5);
+                border-radius: 1rem;
+                font-size: 1rem;
+                color: $form-color-primary;
+                padding-left: 3rem;
+                width: 100%;
+                transition: all 0.2s ease;
+
+                &:focus {
+                    border-color: rgba($form-color-primary, 1);
+
+                    &::placeholder {
+                        opacity: 0;
+                    }
+                }
+
+                &::placeholder {
+                    color: $form-color-primary;
+                }
+            }
+        }
+
+        .remember-me {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            color: $form-color-primary;
+            width: 100%;
+            padding: 0 1rem;
+
+            font-size: .82rem;
+
+            a {
+                text-decoration: underline;
+                color: $form-color-primary;
+            }
+        }
+
+        .btn-field {
+            width: 100%;
+            text-align: center;
+            margin-top: 1rem;
+
+            .btn {
+                color: #444;
+                background-color: $form-color-primary;
+                border: 2px solid $form-color-primary;
+                font-size: 1.25rem;
+                font-weight: 500;
+                transition: all 0.2s ease;
+                padding: 0.75rem 1.5rem;
+                border-radius: 1rem;
+
+                &:hover {
+                    background-color: #444;
+                    color: $form-color-primary;
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+
+    // Media query for larger screens
+    @media (min-width: 768px) {
+        .form {
+            width: 420px;
+            padding: 2rem 0;
+        }
+
+        .login-form {
+            .form-group {
+                padding: 0 2rem 2rem 2rem;
+            }
+
+            .field i {
+                transform: translate(3rem, 0.75rem);
+            }
+
+            .remember-me {
+                padding: 0 2rem 2rem 2rem;
+            }
+        }
+    }
+
+    @media (max-width: 420px) {
+        .form {
+            border: none;
+            box-shadow: none;
+            background-color: transparent;
+        }
+
+        .login-form {
+            .remember-me {
+                padding: 0 5px 5px 5px;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+                padding-bottom: 2rem;
+            }
+        }
+    }
+}
