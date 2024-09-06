@@ -13,9 +13,9 @@ export default function Login() {
     })
 
     /**
-     * Le formulaire est controler, pas de perte de performance importante
+     * Le formulaire est controlé, pas de perte de performance importante
      * 
-     * @param e 
+     * @param e
      */
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -23,7 +23,7 @@ export default function Login() {
 
     /**
      * TODO
-     * Fonction envoyer la requete de connexion a l'API
+     * Fonction envoyé la requete de connexion a l'API
      * 
      * @param e 
      */
